@@ -1,0 +1,141 @@
+$display-font: 'Staatliches', cursive;
+$serif-font: 'Spectral', serif;
+$main-font: 'Noto Sans JP', sans-serif;
+
+$background-color: #424874;
+$primary-color: #DCD6F7;
+$secondary-color: #A6B1E1;
+$light-color: #F4EEFF;
+$monochrome: #7F7C82;
+$body-text: #F3F1F5;
+
+body {
+    background-color: $background-color !important;
+    height: 100vh;
+    font-family: $main-font;
+    color: $body-text;
+    font-size: 1.5rem;
+}
+
+.container {
+    padding: 2%;
+}
+
+//Navbar
+.nav-wrapper {
+    background-color: $background-color;
+    padding-top: 2vw;
+}
+
+.logo {
+    font-family: $serif-font;
+    font-size: 3rem;
+    color: $primary-color;
+}
+
+//Header
+.hero {
+    padding-top: 4vh;
+    margin-bottom: 5%;
+}
+
+.hero-img-container {
+    //background-color: $secondary-color;
+    height: auto;
+    display: flex;
+
+    .hero-img {
+        margin: auto;
+        
+    }
+}
+
+.hero-intro {
+    position: absolute; /* Reposition logo from the natural layout */
+    left: 6vw;
+    top: 50vh;
+    width: 50vw;
+    height: 200px;
+    z-index: 2;
+    background-color: $primary-color;
+    display: flex;
+    padding: 2%;
+
+    h1 {
+        font-family: $serif-font;
+        font-size: 8vw;
+    }
+}
+
+//Strengths
+.separator {
+    font-family: $serif-font;
+    text-align: center;
+}
+
+.strength-text-container {
+    background-color: $light-color;
+    color: $background-color;
+    text-align: center;
+    font-size: 5vh;
+}
+
+.resize {
+    display: block;
+    width: 30vw;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+//Footer
+.page-footer {
+    background-color: $secondary-color;
+}
+
+//media query
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .hero-img {
+        max-width: 90%;
+    }
+
+    /* .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "img1"
+        "text1"
+        "img2"
+        "text2";
+    }
+
+    .img1 {grid-area: img1;}
+    .img2 {grid-area: img2;}
+    .text1 {grid-area: text1;}
+    .text2 {grid-area: text2;} */
+
+}
+
+//animations
+.tracking-in-expand{
+    -webkit-animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both}
+
+@-webkit-keyframes tracking-in-expand{
+    0%{
+        letter-spacing:-.5em;opacity:0
+    }40%{
+        opacity:.6
+    }100%{
+        opacity:1
+    }
+}@keyframes tracking-in-expand{
+    0%{
+        letter-spacing:-.5em;opacity:0
+    }40%{
+        opacity:.6
+    }100%{
+        opacity:1}
+    }
